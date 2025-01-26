@@ -1,0 +1,363 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0078d7;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background-color: #f3f3f3;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav a {
+    margin: 0 25px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #0078d7;
+}
+
+.sidebar-left, .sidebar-right {
+    position: fixed;
+    top: 80px;
+    width: 220px;
+    height: 70vh;
+    background-color: orange;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-left {
+    left: 20px;
+}
+
+.sidebar-right {
+    right: 20px;
+}
+
+*.content {
+    margin: 100px auto;
+    padding: 20px;
+    width: 60%;
+    text-align: center;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.intro-text {
+    width: 50%;
+    text-align: left;
+}
+
+.intro-text .hello {
+    font-size: 20px;
+    color: #0078d7;
+    font-weight: bold;
+}
+
+.intro-text h1 {
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.intro-text p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.intro-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.intro-text ul li {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.intro-image {
+    width: 40%;
+}
+
+.intro-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* New styles for the contact section */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.icon-container {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.contact-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+}
+
+.icon-container:hover .contact-icon {
+    transform: scale(1.5);
+}
+
+/* New styles for the hobbies section */
+.hobbies-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.hobby-item {
+    width: 200px;
+    text-align: center;
+}
+
+.hobby-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hobby-item:hover .hobby-image {
+    transform: scale(1.1);
+}
+
+h2 {
+    font-size: 32px;
+    color: #0078d7;
+}
+
+
+
+
+
+
+
+
+/* Basic styling for the contact form */
+.contact-form {
+    max-width: 800px; /* زيادة العرض ليصبح أكبر */
+    margin: 20px auto;
+    padding: 30px; /* زيادة المسافة الداخلية */
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px; /* زيادة الحشو داخل الحقول */
+    font-size: 16px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #0078d7;
+    outline: none;
+}
+
+.contact-form .submit-btn {
+    background-color: #0078d7;
+    color: white;
+    padding: 14px 24px; /* تكبير حجم الزر */
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form .submit-btn:hover {
+    background-color: #0056a0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Content Section */
+/* .content {
+    margin: 100px auto;
+    padding: 20px;
+    width: 70%;
+    text-align: center;
+} */
+
+/* Slider Section */
+.slider-container {
+    width: 80%; /* العرض 80% من عرض الشاشة */
+    height: 50vh; /* ارتفاع 50% من ارتفاع الشاشة */
+    margin: 0 auto;
+    overflow: hidden; /* إخفاء أي محتوى يتجاوز الحاوية */
+    position: relative;
+}
+
+/* Slider (holds all the slides) */
+.slider {
+    display: flex;
+    flex-direction: row; /* التنقل بين الصور بشكل أفقي */
+    width: 800%; /* عرض الحاوية ليشمل 8 صور */
+    animation: slideAnimation 40s infinite; /* الحركة التلقائية للصور */
+    gap: 3vw; /* مسافة بين كل صورة والأخرى */
+}
+
+/* Each Slide */
+.slide {
+    position: relative;
+    width: 12.5vw; /* عرض كل صورة 12.5% من عرض الشاشة */
+    height: 50vh; /* ارتفاع كل صورة 50% من ارتفاع الشاشة */
+    flex-shrink: 0; /* منع الصور من التقلص */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Country Name */
+.country-name {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 20px; /* حجم خط أكبر ليتناسب مع الصورة */
+    padding: 8px;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Image Styling */
+.slide img {
+    width: 100%; /* الصورة تشغل كامل عرض الحاوية */
+    height: 100%; /* الصورة تشغل كامل ارتفاع الحاوية */
+    object-fit: cover; /* للحفاظ على الصورة كاملة دون تشويه */
+    display: block;
+    border-radius: 10px;
+}
+
+/* Animation for the slides */
+
+/* Each Slide */
+.slide {
+    position: relative;
+    width: 50vw; 
+    height: 50vh; 
+    flex-shrink: 0; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Country Name */
+.country-name {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 18px; /* تقليل حجم الخط ليتناسب مع المساحة */
+    padding: 8px;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Image Styling */
+.slide img {
+    width: 100%; /* الصورة تشغل كامل عرض الحاوية */
+    height: 100%; /* الصورة تشغل كامل ارتفاع الحاوية */
+    object-fit: contain; /* للحفاظ على الصورة كاملة دون قص */
+    display: block;
+    border-radius: 10px;
+}
+
+/* Animation for the slides */
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(0); 
+    }
+    33.33% {
+        transform: translateX(-100vw); 
+    }
+    66.66% {
+        transform: translateX(-200vw); 
+    }
+    100% {
+        transform: translateX(0); 
+    }
+}
